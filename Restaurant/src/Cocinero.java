@@ -1,11 +1,13 @@
 public class Cocinero extends Trabajador{
-    private int salario;
-    private int horasTrabajadas;
 
-    public Cocinero(int salario, int horasTrabajadas, String nombre, int edad) {
+    private int salario;
+    private final int horasTrabajadas = 40;
+    private final int euroHora = 20;
+
+    public Cocinero(String nombre, int edad) {
         super(nombre, edad);
-        this.salario = salario;
-        this.horasTrabajadas = horasTrabajadas;
+        this.salario = this.calcularSalario();
+
     }
 
 
@@ -13,22 +15,16 @@ public class Cocinero extends Trabajador{
         return this.salario;
     }
 
-    public void setSalario(int salario) {
-        this.salario = salario;
-    }
+ 
 
     public int getHorasTrabajadas() {
         return this.horasTrabajadas;
     }
 
-    public void setHorasTrabajadas(int horasTrabajadas) {
-        this.horasTrabajadas = horasTrabajadas;
-    }
 
 
     @Override
     public int calcularSalario() {
-        int euroHora = 20;
         salario = euroHora * horasTrabajadas;
         return salario;
     }

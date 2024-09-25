@@ -1,9 +1,9 @@
 public class Camarero extends Trabajador {
     private int salario;
-    private int horasTrabajadas;
+    private final int horasTrabajadas;
     private int euroHora;
 
-    public Camarero(int salario, int horasTrabajadas, String nombre, int edad, int euroHora) {
+    public Camarero(String nombre, int edad, int euroHora) {
         super(nombre, edad);
         this.salario = salario;
         this.horasTrabajadas = horasTrabajadas;

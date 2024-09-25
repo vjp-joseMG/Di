@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Restaurante {
 
 private Trabajador [] trabajadores;
-private int ocupacion;
+private static int ocupacion;
 
     public Restaurante() {
         this.trabajadores = new Trabajador[5];
@@ -21,7 +21,7 @@ private int ocupacion;
             System.out.println("Introduzca la edad");
             int edad = Integer.parseInt(dato.nextLine());
 
-            trabajadores = new Camarero(edad, nombre, edad, edad)
+            this.trabajadores[ocupacion] = new Cocinero()
 
         }
 
